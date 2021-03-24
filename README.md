@@ -6,7 +6,8 @@ Scopul temei este realizarea unei aplicatii care respecta modelul client-server
 pentru gestiunea mesajelor. Serverul va realiza legatura dintre clientii din
 platforma. Clientii TCP se pot conecta la server si pot trimite acestuia mesaje
 de tip subscribe/unsubscribe. Clientii UDP trimit mesaje in format predefinit
-la server, care le transmite apoi la subscriber.
+la server, care le transmite apoi la subscriber. <br>
+Enunt: https://acs.curs.pub.ro/2019/pluginfile.php/70988/mod_resource/content/1/Tema_2_Protocoale_2019_2020.pdf
 
 #### COMPILARE SI RULARE
       COMPILARE:     make
