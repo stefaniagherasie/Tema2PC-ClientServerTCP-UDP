@@ -8,12 +8,25 @@ platforma. Clientii TCP se pot conecta la server si pot trimite acestuia mesaje
 de tip subscribe/unsubscribe. Clientii UDP trimit mesaje in format predefinit
 la server, care le transmite apoi la subscriber.
 
+#### COMPILARE SI RULARE
+      COMPILARE:     make
+      RULARE:        ./server <port>
+                     ./subscriber <client_id> <ip_server> <port>
+                    
+                    
+#### GENERARE MESAJE UDP
+      Comenzi valide cu care se poate face rularea unui client, dacă serverul rulează local pe portul 8080:
+          ► python3 udp_client.py 127.0.0.1 8080
+          ► python3 udp_client.py --mode manual 127.0.0.1 8080
+          ► python3 udp_client.py --source-port 1234 --input_file three_topics_payloads.json
+                                  --mode random --delay 2000 127.0.0.1 8080
+
 #### IMPLEMENTARE
 Pentru inceput s-au creat niste structuri care sa retina mesajele(udp_msg si 
 tcp_msg), care sa retina un abonament la un topic si o structura de tip client.
 
 
-- SERVER
+1. **SERVER**
 
 Pentru a putea comunica cu cele doua tipuri de clienti, se deschid atat 
 un socket TCP (tcp_sockfd), cat si unul UDP (udp_sockfd). Pentru a putea conecta
@@ -54,7 +67,7 @@ se elimina clientul din lista de subscriberi a topicului dorit.
 
 
 
-- SUBSCRIBER
+2 **SUBSCRIBER**
 
 Pentru a putea comunica cu serverul, se deschide un socket TCP pentru acesta.
 In mod asemanator cu serverul, adaug la descriptorii de citire 0 si sockfd.
