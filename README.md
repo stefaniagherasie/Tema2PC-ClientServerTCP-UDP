@@ -67,7 +67,6 @@ subscriberi. Daca topicul exista, se adauga doar clientul. Pentru unsubscribe
 se elimina clientul din lista de subscriberi a topicului dorit.
 
 
-
 2. **SUBSCRIBER**
 
 Pentru a putea comunica cu serverul, se deschide un socket TCP pentru acesta.
