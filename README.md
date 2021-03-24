@@ -67,7 +67,7 @@ se elimina clientul din lista de subscriberi a topicului dorit.
 
 
 
-2 **SUBSCRIBER**
+2. **SUBSCRIBER**
 
 Pentru a putea comunica cu serverul, se deschide un socket TCP pentru acesta.
 In mod asemanator cu serverul, adaug la descriptorii de citire 0 si sockfd.
