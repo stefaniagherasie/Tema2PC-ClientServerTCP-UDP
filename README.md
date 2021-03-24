@@ -8,6 +8,7 @@ platforma. Clientii TCP se pot conecta la server si pot trimite acestuia mesaje
 de tip subscribe/unsubscribe. Clientii UDP trimit mesaje in format predefinit
 la server, care le transmite apoi la subscriber.
 
+#### IMPLEMENTARE
 Pentru inceput s-au creat niste structuri care sa retina mesajele(udp_msg si 
 tcp_msg), care sa retina un abonament la un topic si o structura de tip client.
 
@@ -72,7 +73,7 @@ Subscriberul are o lista de topicuri la care e abonat, care este folosita pentru
 a ne asigura ca acesta nu se aboneaza la acelasi topic de mai multe ori sau
 sa incerce sa se dezaboneze de la un topic la care nu era abonat.
 
-- MENTIUNI
+#### MENTIUNI
 
 Am tratat urmatoarele cazuri de eroare: orice tip de eroare aparuta a conexiunea
 dintre server si clienti, comenzi invalide la mesajele de abonare, id-ul clientului
