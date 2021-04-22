@@ -31,6 +31,22 @@ Enunt: [aici](https://acs.curs.pub.ro/2019/pluginfile.php/70988/mod_resource/con
 ## Implementare
 Pentru inceput s-au creat niste structuri care sa retina mesajele (`udp_msg` si 
 `tcp_msg`), care sa retina un abonament la un topic si o structura de tip client.
+```c
+typedef struct {
+	char data[MESSAGE_LEN];
+	char ip[20];
+	int port;
+} udp_msg;
+```
+
+```c
+typedef struct {
+	char command[15];
+	char topic[51];
+	int SF;
+	char id_client[10];
+} tcp_msg;
+```
 
 
 #### 1. SERVER
