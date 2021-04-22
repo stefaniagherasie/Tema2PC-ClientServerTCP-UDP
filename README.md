@@ -35,7 +35,7 @@ Pentru inceput s-au creat niste structuri care sa retina mesajele (`udp_msg` si
 `tcp_msg`), care sa retina un abonament la un topic si o structura de tip client.
 
 
-## 1. SERVER
+#### 1. SERVER
 
 Pentru a putea comunica cu cele doua tipuri de clienti, se deschid atat 
 un socket `TCP` (tcp_sockfd), cat si unul `UDP` (udp_sockfd). Pentru a putea conecta
