@@ -10,11 +10,9 @@ la server, care le transmite apoi la subscriber. <br>
 Enunt: [aici](https://acs.curs.pub.ro/2019/pluginfile.php/70988/mod_resource/content/1/Tema_2_Protocoale_2019_2020.pdf)
 
 ## Compilare si Rulare
-> COMPILARE:
 > ```shell
 >      make
-> ```
-> RULARE:        
+> ```    
 > ```shell 
 >     ./server <port>
 >     ./subscriber <client_id> <ip_server> <port>
