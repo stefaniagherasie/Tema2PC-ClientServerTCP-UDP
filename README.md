@@ -56,8 +56,7 @@ un socket `TCP` (tcp_sockfd), cat si unul `UDP` (udp_sockfd). Pentru a putea con
 la server mai multi subscriberi, se foloseste multiplexarea. Astfel, se adauga 
 la multimea de descriptori de citire, folositi de apelul `select()`, socketul TCP, 
 socketul UDP, respectiv 0 (pentru citirea de la stdin). <br>
-Intr-o structura 
-repetitiva, pentru fiecare numar pana la descriptorul cu cea mai mare valoare,
+Intr-o structura bucla for, pentru fiecare numar pana la descriptorul cu cea mai mare valoare,
 se verifica daca acesta apartine multimii descriptorilor de citire, situatie
 in care se trateza mai multe cazuri (daca numarul este 0, tcp_sockfd sau udp_sockfd).
 
@@ -83,7 +82,7 @@ intr-o lista.
 
 - Daca descriptorul nu este in niciunul din cazurile de mai sus, inseamna ca
 s-a primit un mesaj de la clientul TCP. Acesta este de tipul `tcp_msg` si 
-contine o comanda de subscribe/unsubscribe. Daca se primeste un topic inexistent
+contine o comanda de `subscribe/unsubscribe`. Daca se primeste un topic inexistent
 pana atunci, acesta se adauga, fiind adaugat si clientul la lista acestuia de 
 subscriberi. Daca topicul exista, se adauga doar clientul. Pentru unsubscribe 
 se elimina clientul din lista de subscriberi a topicului dorit.
@@ -101,7 +100,7 @@ care se introduc comenzi invalide. Mesajul de abonare se trimite la server.
 
 - Daca descriptorul este cel al socketului de TCP inseamna ca s-a primit un
 mesaj de la server, care provine de la clientul UDP. Acesta este prelucrat 
-pentru tinand cont de formatul prestabilit in enuntul temei. Acesta este afisat
+pentru tinand cont de formatul prestabilit in enuntul temei. Este afisat
 la stdout asa cum este specificat.
 
 Subscriberul are o lista de topicuri la care e abonat, care este folosita pentru
