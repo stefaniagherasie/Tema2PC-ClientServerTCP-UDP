@@ -10,23 +10,23 @@ la server, care le transmite apoi la subscriber. <br>
 Enunt: [aici](https://acs.curs.pub.ro/2019/pluginfile.php/70988/mod_resource/content/1/Tema_2_Protocoale_2019_2020.pdf)
 
 ## Compilare si Rulare
-> ```shell
->      make
-> ```    
-> ```shell 
->     ./server <port>
->     ./subscriber <client_id> <ip_server> <port>
-> ```
+```shell
+     make
+```    
+```shell 
+    ./server <port>
+    ./subscriber <client_id> <ip_server> <port>
+```
                     
                     
 ## Generare Mesaje UDP
-> Comenzi valide cu care se poate face rularea unui client, dacă serverul rulează local pe portul 8080:
-> ```shell
->     ► python3 udp_client.py 127.0.0.1 8080
->     ► python3 udp_client.py --mode manual 127.0.0.1 8080
->     ► python3 udp_client.py --source-port 1234 --input_file three_topics_payloads.json
->                             --mode random --delay 2000 127.0.0.1 8080
-> ```
+Comenzi valide cu care se poate face rularea unui client, dacă serverul rulează local pe portul 8080:
+```shell
+    ► python3 udp_client.py 127.0.0.1 8080
+    ► python3 udp_client.py --mode manual 127.0.0.1 8080
+    ► python3 udp_client.py --source-port 1234 --input_file three_topics_payloads.json
+                            --mode random --delay 2000 127.0.0.1 8080
+```
 
 ## Implementare
 Pentru inceput s-au creat niste structuri care sa retina mesajele (`udp_msg` si 
